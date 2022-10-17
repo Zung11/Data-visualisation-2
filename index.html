@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Suicide Rate 2009 - 2019</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+    </head>
+
+    <body>
+        <div class="page">
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <h1>WORLD'S SUICIDE RATE <br>
+                        2009 - 2019</h1>
+                        <h2>Overview</h2>
+                    <div id="choropleth_map" class="vis-container"></div>
+                    <p class="center"> <span class = "medium">In 2019</span>, suicide was responsible for <br> <span class="increase" >1.4%</span> of all deaths <br> taking away  <span class="increase" >800,000</span> lives <br> which is<span class="increase" > one person every 40 seconds </span></p>
+                    
+                   
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <h2>Where?</h2>
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-4-5">
+                    <h4>Regions of highest suicide rate </h4>
+                </div>
+
+                <div class="pure-u-4-5">
+                    <div id="top10" class="vis-container"></div>
+                </div>
+                <div class="pure-u-1-5">
+                    <p> In 2019, out of the 10 countries with highest suicide rate,<span class="africa">6</span> are from <span class="africa">Africa</span> </p>
+                    <p> <span class="africa"> Lesotho's</span> suicide rate is <span class="africa">87.49</span>, which is almost <span class="increase" >10x higher</span> than the global's average of 9 per 100,000 </p>
+            </div>            
+            <div class="pure-g">
+                <div class="pure-u-4-5">
+                    <h4>Suicide rate over 10 years</h4>
+                </div>
+
+                <div class="pure-u-4-5">
+                    <div id="linechart_and_scatterplot" class="vis-container"></div>
+                </div>
+                <div class="pure-u-1-5">
+                    <p class="description">The continent of <span class="africa">Africa</span> has the <span class="increase">highest</span> suicide rate, <span class="increase">1.6 times higher</span> than the global average</p>
+                    <p class="description">Generally speaking, countries where people earn less <span class="medium" ></span> have <span class="description_high">higher</span> suicide rates than countries with high incomes. This explains the <span class="decrease"> decrease</span> in suicide rates in<span class="africa"> Africa</span> over the last 10 years </p>
+                    </div>
+            </div>
+        </div>
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <h2>Who?</h2>
+                </div>
+            </div>
+
+            <div class="pure-g">
+                <div class="pure-u-4-5">
+                    <h4>Suicide rate by age and gender</h4>
+                </div>
+                <div class="pure-u-4-5">
+                    <div id="pyramid_barchart" class="vis-container"></div>
+                </div>
+
+                <div class="pure-u-1-5">
+                    <p>Suicide rate <span class="increase">increases exponentially</span>  as age inceases due to a number of reasons: <br> <br>- Grief over lost loved ones <br>- Loss of self-sufficiency <br>- Chronic illness and pain <br>- Cognitive impairment <br>- Financial troubles</p>
+                    <p>Not so fun fact: <br> On average, <span class="woman">women</span> tend to have more sucuidal thoughts, but <span class="man">men</span> are way more likely to commit suicide</p>                
+                </div>
+                </div>
+            </div>
+        
+
+    <script type="text/javascript">
+        var spec1 ="js/choropleth_map.vg.json"
+        var spec2 = "js/linechart_and_scatterplot.vg.json"
+        var spec3 = "js/pyramid_barchart.vg.json"
+        var spec4 = "js/top10.vg.json"
+
+        vegaEmbed('#choropleth_map', spec1, {"actions": false}).then(function(result){}).catch(console.error)
+        vegaEmbed('#linechart_and_scatterplot', spec2, {"actions": false}).then(function(result){}).catch(console.error)
+        vegaEmbed('#pyramid_barchart', spec3, {"actions": false}).then(function(result){}).catch(console.error)
+        vegaEmbed('#top10', spec4, {"actions": false}).then(function(result){}).catch(console.error)
+        
+    </script>
+    </body>
+</html>
