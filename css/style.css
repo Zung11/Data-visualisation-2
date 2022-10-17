@@ -26,6 +26,10 @@ h2{
     padding: 10px;
     background-color: #cfcfcf;
     text-align: left;
+    background-image: repeating-linear-gradient(to right, #9c6644, #ce796b 10%, #9caea9 20%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 h3{
     font-family: 'Maven Pro', sans-serif;
@@ -52,7 +56,7 @@ h4{
     font-weight: bold;
     font-size: 20px;
     text-align: left;
-    background-color: #e2e2e2;
+ 
     margin-inline: px;
     padding: 5px;
     margin-top: 10px;
@@ -181,4 +185,16 @@ p{
     font-size: 17px;
     color: #203354 ;
     font-weight:500;
+}
+.heading {    
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    background-color: #cfcfcf;
+    text-align: left;
+    background-image: radial-gradient(circle, #2f7cc3, #de0c0c);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
 }
